@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+
+body {
+    font-family: 'Utile';   
+    font-weight: bold;
+    background-color: #E6FBFF;
+    color: #222550;
+}
+
+header {
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-menu.show {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.menu-icon img {
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu-icon:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.nav-menu {
+    list-style-type: none;
+    background-color: #fff;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+}
+
+
+.nav-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu li {
+    margin-bottom: 1rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #005580;
+    font-size: 1rem;
+}
+
+.menu-icon img {
+    height: 50px;
+    width: 50px;
+}
+
+.spline-viewer {
+    width: 100%;
+    height: 500px;
+}
+
+.h-1 {
+    text-align: center;
+    color: black;
+}
+
+.h-1 .hello {
+    font-size: 24px;
+}
+
+.h-1 .name {
+    font-size: 70px;
+}
+
+.h-1 .student {
+    font-size: 28px;
+    font-weight: lighter;
+}
+
+.h-1 .producer {
+    font-size: 28px;
+    font-weight: lighter;
+}
+
+.button-cv {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.button {
+    background-color: #09b4d8;
+    border-radius: 10px;
+    width: 180px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.title-about-me {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.w1 {
+    padding-right: 8px;
+    padding-bottom: 20px;
+    color: #6aa2aa;
+}
+
+.text-about-me {
+    color: black;
+    line-height: 24px;
+}
+
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.my-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.title-my-projects {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.project {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.project:hover {
+    transform: scale(1.1);
+}
+.project a {
+    display: block;
+}
+.project img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .project img {
+        height: 160px;
+    }
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.title-contact {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.contact-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.contact-item a {
+    display: inline-block;
+}
+
+.contact-item:hover img {
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #222550;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #09b4d8;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .logo {
+        padding-left: 20px;
+    }
+
+    .jumbo {
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    .name {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .h-1 {
+        text-align: start;
+        padding-left: 20px;
+    }
+
+    .t1 {
+        flex: 1;
+        padding-top: 90px;
+    }
+
+    .button-cv {
+        display: flex;
+        justify-content: start;
+        
+    }
+    
+
+    .spline-viewer {
+        width: 30%;
+        height: 100px;
+        flex: 1;
+    }
+
+    .spline-container {
+        flex: 1;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    
+    .project img {
+        height: 200px;
+    }
+    
+    .contact-item {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .logo {
+        padding-left: 20px;
+    }
+
+    .jumbo {
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    .name {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .h-1 {
+        text-align: start;
+        padding-left: 20px;
+    }
+
+    .h-1 .hello {
+        font-size: 48px;
+    }
+    
+    .h-1 .name {
+        font-size: 120px;
+    }
+    
+    .h-1 .student {
+        font-size: 38px;
+        font-weight: lighter;
+    }
+    
+    .h-1 .producer {
+        font-size: 38px;
+        font-weight: lighter;
+    }
+    
+    .button-cv {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .t1 {
+        flex: 1;
+        padding-top: 90px;
+    }
+
+    .button-cv {
+        display: flex;
+        justify-content: start;
+        
+    }
+    
+
+    .spline-viewer {
+        width: 30%;
+        height: 100px;
+        flex: 1;
+    }
+
+    .spline-container {
+        flex: 1;
+    }
+
+    .nav-menu {
+        background-color: #E6FBFF;
+        display: flex;
+        justify-content: space-between;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        position: static; 
+        box-shadow: none; 
+        transition: none; 
+    }
+
+    .nav-menu a {
+        padding-right: 20px;
+    }
+    
+    
+    .menu-icon {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: row;
+        padding-top: 90px;
+    }
+    
+    .title-about-me {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+    }
+    
+    .w1 {
+        padding-right: 8px;
+        padding-bottom: 20px;
+        color: #6aa2aa;
+    }
+    
+    .text-about-me {
+        color: black;
+        line-height: 24px;
+        display: flex;
+        justify-content: center;
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+    
+    
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        padding-top: 90px;
+        text-align: center;
+        padding-left: 20px;
+
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    
+    .project img {
+        height: 200px;
+    }
+    
+    .contact-item {
+        width: 300px;
+    }
+}
